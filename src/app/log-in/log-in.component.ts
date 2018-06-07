@@ -21,19 +21,21 @@ export class LogInComponent implements OnInit {
     // this.valuesLogIn.push({emailLogIn: this.emailLogIn,passwordLogIn: this.passwordLogIn});
     // form.reset()
     this.values.forEach(value => {
-      if ((value.email == this.emailLogIn)){
-        if((value.password == this.passwordLogIn)){
+      if ((value.email == this.emailLogIn) && (value.password == this.passwordLogIn)){
+        // if((value.password == this.passwordLogIn)){
           // this.router.navigate['/']
         console.log('success')
-        } 
+       }
         else {
           console.log('error')
         }
-        console.log('error')
-      }
-    })
+        // console.log('error')
+      // }
+    // })
+  })
   }
 }
+
   ngOnInit() {
   	this.values = this.SimpleServiceService.getFromService(this.values);
   }
